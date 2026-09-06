@@ -90,13 +90,13 @@ public interface PatientControllerDocs {
                             examples = @ExampleObject(
                                     name = "InternalServerErrorResponse",
                                     summary = "Exemplo de erro interno de persistência",
-                                    value = """
-                                            {
-                                              "timestamp": "2026-06-06T14:30:00",
-                                              "status": 500,
-                                              "error": "Internal Server Error",
-                                              "message": "Ocorreu um erro interno no servidor. Tente novamente mais tarde."
-                                            }"""
+                                                                                                                                                value = """
+                                                                                                                                                                                {
+                                                                                                                                                                                        "timestamp": "2026-06-06T14:30:00",
+                                                                                                                                                                                        "status": 500,
+                                                                                                                                                                                        "error": "Internal Server Error",
+                                                                                                                                                                                        "message": "Ocorreu um erro interno no servidor. Tente novamente mais tarde."
+                                                                                                                                                                                }"""
                             )
                     )
             )
