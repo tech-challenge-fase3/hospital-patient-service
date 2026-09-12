@@ -13,6 +13,14 @@ spring:
     password: ${DB_PASSWORD:adminpassword}
     driver-class-name: org.postgresql.Driver
 
+hospital:
+  keycloak:
+    server-url: ${KEYCLOAK_SERVER_URL:http://192.168.137.2:8080}
+    realm: ${KEYCLOAK_REALM:hospital}
+    admin-username: ${KEYCLOAK_ADMIN_USERNAME:admin}
+    admin-password: ${KEYCLOAK_ADMIN_PASSWORD:admin}
+    client-id: ${KEYCLOAK_CLIENT_ID:admin-cli}
+
   jpa:
     hibernate:
       ddl-auto: validate
@@ -47,3 +55,12 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.hospital.schedulingservice: INFO
+    com.hospital.schedulingservice.infra.messaging: INFO
+    com.hospital.schedulingservice.infra.persistence: INFO
+    org.springframework.amqp.rabbit: INFO
+    org.hibernate.SQL: INFO

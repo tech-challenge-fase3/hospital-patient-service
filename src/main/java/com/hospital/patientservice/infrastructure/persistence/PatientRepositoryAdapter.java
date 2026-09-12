@@ -10,6 +10,7 @@ import com.hospital.patientservice.infrastructure.mappers.PatientMapper;
 
 @Repository
 public class PatientRepositoryAdapter implements PatientRepository {
+
     private final SpringDataPatientRepository springDataRepository;
     private final PatientMapper patientEntityMapper;
 
@@ -28,5 +29,10 @@ public class PatientRepositoryAdapter implements PatientRepository {
     @Override
     public Optional<Patient> findByCpf(String cpf) {
         return springDataRepository.findByCpf(cpf).map(patientEntityMapper::toDomain);
+    }
+
+    @Override
+    public Optional<Patient> findByEmail(String email) {
+        return springDataRepository.findByEmail(email).map(patientEntityMapper::toDomain);
     }
 }
