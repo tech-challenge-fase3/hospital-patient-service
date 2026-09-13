@@ -115,6 +115,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>app</finalName>
         <plugins>
             <!-- Primeiro Plugin: Compiler do Maven com o MapStruct Processor -->
             <plugin>
