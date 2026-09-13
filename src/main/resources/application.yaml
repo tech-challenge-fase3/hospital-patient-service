@@ -15,7 +15,7 @@ spring:
 
 hospital:
   keycloak:
-    server-url: ${KEYCLOAK_SERVER_URL:http://192.168.137.2:8080}
+    server-url: ${KEYCLOAK_SERVER_URL:http://localhost:8080}
     realm: ${KEYCLOAK_REALM:hospital}
     admin-username: ${KEYCLOAK_ADMIN_USERNAME:admin}
     admin-password: ${KEYCLOAK_ADMIN_PASSWORD:admin}
